@@ -1,8 +1,7 @@
 #! /usr/bin/env python
 # encoding: utf-8
 
-from .qa import qa
+from flask_sqlalchemy import SQLAlchemy 
 from .flask_app import app
-from .dbs import db
 
-app.register_blueprint(qa)
+db = SQLAlchemy(app)
